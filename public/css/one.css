@@ -1,0 +1,162 @@
+/*
+================================================
+Common CSS
+================================================
+*/
+.section-number:before {
+  background: #26c6da;
+}
+.section-number:after {
+  background: #26c6da;
+}
+.section-number {
+  border: 1px solid #26c6da;
+}
+.section-number {
+  color: #26c6da;
+}
+#switcher .theme-click {
+    background-color: #26c6da;
+}	
+/*
+================================================
+Scroll top Arrow
+================================================
+*/
+#scrollUp i:hover {
+	color: #26c6da;
+}
+/*
+================================================
+Navigation
+================================================
+*/
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+	color: #26c6da;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+	color: #26c6da;
+}
+/*
+================================================
+Banner Content
+================================================
+*/
+.banner-content a {
+	color: #26c6da;
+}
+.banner-content a:hover {
+	background: #26c6da;
+	border-color: #fff;
+	color: #fff;
+}
+.banner-content h1 {
+	color: #26c6da;
+}
+.banner-content a {
+	border: 2px solid #26c6da;
+	}
+.hero h1 {
+	color:#fff;
+	}	
+.hero h3 {
+	color:#fff;	
+	}	
+.btn.btn-hero {
+	background-color: #26c6da;
+	border-color: #26c6da;
+}	
+.btn.btn-hero:hover, .btn.btn-hero:focus {
+	color: #26c6da;
+	}
+/*
+================================================
+Counters
+================================================
+*/	
+.counters .counter i {
+	color: #26c6da;
+}	
+/*
+================================================
+Services
+================================================
+*/
+.icon-box .icon-content p {}
+.icon-box:hover .icon-left span {
+    color: #26c6da;
+}
+/*
+================================================
+Testimonials Wrapper 
+================================================
+*/	
+.testimonial {
+  background:#26c6da;
+}
+.testimonials-wrapper .owl-theme .owl-dots .owl-dot.active span {
+	background: #26c6da;
+}
+/*
+================================================
+Portfolio
+================================================
+*/
+.portfolio-filter li.active, .portfolio-filter li:hover {
+	background:#26c6da;
+	color:#fff;
+	}
+/*
+================================================
+Our Team
+================================================
+*/	
+.our-team .single-team-item .team-content .designation {
+  color: #26c6da;
+}	
+/*
+================================================
+Pricing Table
+================================================
+*/
+.pricing-table-wrapper .features-price {
+	background:#26c6da;
+	color:#fff;
+}
+.pricing-table-wrapper .plan-price {
+  background: #26c6da;
+}
+.pricing-table-wrapper .features-price .plan-price {
+	background:#fff;
+	} 
+.pricing-table-wrapper .features-price .plan-price > h4, .pricing-table-wrapper .features-price .plan-price > h4 > span, .pricing-table-wrapper .features-price .duration {
+	color:#26c6da;
+	}
+.pricing-table-wrapper .features-price .btn {
+	background:#fff;
+	}	
+.pricing-table-wrapper .features-price .btn:hover {
+	background:#eef1f2;
+	color:#333;
+	}	
+.pricing-table-wrapper .features-price .price-title {
+	color:#fff;
+}
+.pricing-table-wrapper .features-price .price-amount, .pricing-table-wrapper .features-price .price-amount span {
+	color:#26c6da;
+	}
+.pricing-table-wrapper .price-btn:hover {
+	background: #26c6da;
+	color:#fff;
+}
+.features-price-btn {
+	background: #26c6da;
+}
+/*
+================================================
+ Contact Us
+================================================
+*/
+.contact-form .item .icons {
+	color:#26c6da;
+	}

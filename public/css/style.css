@@ -1,0 +1,1218 @@
+/*
+================================================
+/* Table of Content
+==================================================
+
+1. Fonts - Open Sans and Poppins
+2. Common CSS
+3. Loader CSS
+4. Scrool top Arrow
+5. Logo Bar 
+6. Navigation
+7. Banner Wrapper
+8. About Us
+9. Counters
+10. Services
+11. Testimonials Wrapper 
+12. Portfolio
+13. Call to Action
+14. Our Team
+15. Pricing Table
+16. Contact Us
+17. Footer
+18. Media Quries 
+
+/*
+================================================
+1. Fonts - Open Sans and Poppins
+================================================
+
+================================================
+2. Common CSS
+================================================
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #444;
+	overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 0;
+	text-transform: none;
+	color: #000;
+}
+a, a:hover, a:active, a:focus {
+	outline: none;
+	border: none;
+}
+a {
+	color: #666666;
+	transition: all 0.3s ease 0s;
+}
+a:hover {
+	color: #337ab7;
+	text-decoration: none;
+}
+section {
+	width: 100%;
+	float: left;
+	padding: 116px 0;
+}
+.section-number::before {
+	content: "";
+	height: 1px;
+	left: -50px;
+	position: absolute;
+	top: 20px;
+	width: 50px;
+}
+.section-number {
+	border-radius: 100px;
+	display: inline-block;
+	font-size: 25px;
+	height: 40px;
+	margin-left: 50px;
+	position: relative;
+	text-align: center;
+	width: 40px;
+	line-height: 35px;
+}
+.section-number:after {
+	content: "";
+	height: 138px;
+	left: -50px;
+	position: absolute;
+	top: -117px;
+	width: 1px;
+}
+h2.section-heading {
+	font-size: 45px;
+	margin: 10px 0 50px;
+	font-weight: 400;
+}
+/*color changer*/
+#switcher {
+	position: fixed;
+	bottom: 60%;
+	right: -170px;
+	width: 170px;
+	z-index: 9999;
+	font-size: 15px;
+	padding-bottom: 20px;
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	height: 90px;
+	background: #fff;
+	box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+	left: auto;
+}
+#switcher.active {
+	right: 0px;
+}
+#switcher p {
+	color: #fff;
+	bottom: -6px;
+	position: absolute;
+	left: 21px;
+	font-size: 13px;
+}
+#switcher .theme-click {
+	color: #ffffff;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	left: -40px;
+	text-align: center;
+	top: 0;
+	width: 40px;
+	z-index: 2;
+}
+#switcher .theme-color {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	position: absolute;
+	left: 0px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+#switcher .theme-active {
+	background: #26c6da;
+}
+#switcher .theme-color-two {
+	background: #fd9060;
+	left: 40px;
+}
+#switcher .theme-color-three {
+	background: #27ae60;
+	left: 80px;
+}
+#switcher .theme-color-four {
+	background: #069a97;
+	left: 120px;
+}
+#switcher .theme-color-five {
+	background: #fc6e51;
+	left: 0px;
+	top: 40px;
+}
+#switcher .theme-color-six {
+	background: #970001;
+	left: 40px;
+	top: 40px;
+}
+#switcher .theme-color-seven {
+	background: #505fb5;
+	left: 80px;
+	top: 40px;
+}
+#switcher .theme-color-eight {
+	background: #f50079;
+	left: 120px;
+	top: 40px;
+}
+/*
+================================================
+3. Loader CSS
+================================================
+*/
+#loader {
+	background: url(../image/loader.gif) no-repeat center center #fff;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9999999;
+}
+/*
+================================================
+4. Scrool top Arrow
+================================================
+*/
+#scrollUp {
+	background: rgba(69, 75, 84, 0.7) none repeat scroll 0 0;
+	border-radius: 5%;
+	bottom: 30px;
+	color: #fff;
+	font-size: 12px;
+	height: 40px;
+	text-decoration: none;
+	line-height: 38px;
+	right: 30px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	width: 40px;
+}
+#scrollUp i {
+	display: block;
+	line-height: 35px;
+}
+/*
+================================================
+5. Logo Bar 
+================================================
+*/
+.logo-bar {
+	float: left;
+	padding: 15px 0;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	transition: all 400ms ease-in-out 0s;
+}
+.logo-bar.affix {
+	position: fixed;
+	z-index: 999999;
+	box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+}
+.logo-bar.fadeInDown {
+	animation-name: none !important;
+}
+.affix.fadeInDown {
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: fadeInDown !important;
+	animation-play-state: running;
+	animation-timing-function: ease;
+}
+/*
+================================================
+6. Navigation
+================================================
+*/
+.navbar-default {
+	background-color: inherit;
+	border-color: inherit;
+}
+.navbar {
+	border-radius: 0;
+	min-height: auto;
+	margin: 0;
+	border: none;
+	z-index: 9;
+}
+.navbar-collapse {
+	float: right;
+	margin: 6px 0 0;
+	padding: 0;
+}
+.navbar-default .navbar-brand {
+	color: #282828;
+	font-size: 30px;
+	font-weight: 600;
+	padding: 3px 15px 10px;
+	height: auto;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #282828;
+}
+.navbar-nav > li {
+	padding: 0 0 0 30px;
+}
+.navbar-nav > li:first-child {
+	padding: 0;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #000;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+}
+.navbar-nav > li > a {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.nav > li > a {
+	padding: 0;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+	background-color: inherit;
+}
+/*
+================================================
+7. Banner Wrapper
+================================================
+*/
+.affix + .banner-wrapper {
+	margin-top: 49px;
+}
+.banner-wrapper {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.fade-carousel {
+	position: relative;
+	height: 500px;
+}
+.fade-carousel .carousel-inner .item {
+	height: 500px;
+}
+.fade-carousel .carousel-indicators {
+	display: none;
+}
+.hero {
+	position: absolute;
+	top: 50%;
+	left: 34%;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	-moz-transform: translate3d(-50%, -50%, 0);
+	-ms-transform: translate3d(-50%, -50%, 0);
+	-o-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+	opacity: 0;
+}
+.carousel .item.active .hero {
+	opacity: 1;
+}
+.hero h1 {
+	font-size: 40px;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+}
+.hero h3 {
+	font-size: 30px;
+	font-weight: 300;
+	padding: 0;
+	margin: 0 0 8px;
+}
+.carousel .item.active .animated1 {
+	animation: 1s ease-in 500ms normal both 1 running flipInX;
+}
+.carousel .item.active .animated2 {
+	animation: 1s ease-in-out 100ms normal both 1 running bounceInLeft;
+}
+.carousel .item.active .animated3 {
+	animation: 1s ease-in 500ms normal both 1 running bounceIn;
+}
+.btn.btn-lg {
+	padding: 10px 40px;
+}
+.btn.btn-hero {
+	color: #fff;
+	font-size: 16px;
+}
+.btn.btn-hero, .btn.btn-hero:hover, .btn.btn-hero:focus {
+	outline: none;
+	margin: 20px auto;
+	padding: 14px 50px;
+	border-radius: 100px;
+	transition: all 0.3s ease 0s;
+	border: none;
+}
+.btn.btn-hero:hover, .btn.btn-hero:focus {
+	background: #fff;
+}
+/* Slides backgrounds */
+.fade-carousel .slides .slide-1, .fade-carousel .slides .slide-2, .fade-carousel .slides .slide-3 {
+	height: 500px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+	background-image: url(../image/banner.jpg);
+}
+.fade-carousel .slides .slide-2 {
+	background-image: url(../image/banner1.jpg);
+}
+.fade-carousel .slides .slide-3 {
+	background-image: url(../image/banner2.jpg);
+}
+.fade-carousel .carousel-inner .item {
+	-webkit-transition-property: opacity;
+	transition-property: opacity
+}
+.fade-carousel .carousel-inner .active.left, .fade-carousel .carousel-inner .active.right, .fade-carousel .carousel-inner .item {
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+.fade-carousel .carousel-inner .active, .fade-carousel .carousel-inner .next.left, .fade-carousel .carousel-inner .prev.right {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+}
+.fade-carousel .carousel-inner .active.left, .fade-carousel .carousel-inner .active.right, .fade-carousel .carousel-inner .next, .fade-carousel .carousel-inner .prev {
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0)
+}
+.fade-carousel .carousel-control {
+	z-index: 2
+}
+.left.welcome-control {
+	right: auto;
+	left: 50px;
+}
+.right.welcome-control {
+	left: auto;
+	right: 50px;
+}
+.welcome-control:hover, .welcome-control:focus {
+	color: #ffffff;
+}
+.welcome-control {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: none;
+	color: #ffffff;
+	font-size: 35px;
+	height: auto;
+	left: 0;
+	line-height: 22px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	width: auto;
+	z-index: 20;
+}
+/*
+================================================
+8. About Us
+================================================
+*/
+.aboutus {
+	padding: 116px 0 85px;
+}
+.about h2 {
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+.aboutus p {
+	margin: 0 0 20px;
+}
+.about-box ul {
+	padding: 0;
+	list-style: none;
+}
+.about-box .read-more {
+	background: #040a2c none repeat scroll 0 0;
+	color: #fff;
+	float: left;
+	margin-top: 20px;
+	padding: 12px 30px;
+	text-transform: uppercase;
+}
+.about-box {
+	float: left;
+	width: 100%;
+}
+.about-box figure {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.aboutus p {
+	font-weight: 300;
+	line-height: 22px;
+	margin-bottom: 30px;
+}
+.aboutus .btn.btn-hero {
+	margin-top: 0;
+	color: #fff;
+	font-size: 18px;
+}
+.aboutus .btn.btn-hero:hover, .aboutus .btn.btn-hero:focus {
+	background: #282828;
+	color: #fff;
+}
+/*
+================================================
+9. Counters
+================================================
+*/
+.counters:before {
+	background: #000;
+	bottom: 0;
+	content: "";
+	left: 0;
+	opacity: 0.8;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+.counters {
+	background: url(../image/counters-bg.jpg) no-repeat fixed left top;
+	margin: 0;
+	padding: 91px 0;
+	position: relative;
+	width: 100%;
+	float: left;
+	text-align: center;
+	z-index: 9;
+}
+.counters .counter i {
+	margin: 0 0 20px;
+	font-size: 50px;
+	transition: all 400ms linear 0s;
+	display: block;
+}
+.counters .counter:hover i {
+	transform: translateY(-15px);
+}
+.counters .counter .number {
+	font-size: 30px;
+	margin: 0 0 20px;
+	padding: 0;
+	color: #fff;
+	font-weight: 600;
+}
+.counters .counter {
+	border-radius: 4px;
+	min-height: 170px;
+	padding: 25px 30px;
+	transition: all 400ms linear 0s;
+}
+.counters .counter p {
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-weight: 500;
+}
+/*
+================================================
+10. Services
+================================================
+*/
+.services {
+	padding: 116px 0 71px;
+}
+.icon-box {
+	margin: 0 0 40px;
+}
+.services .icon-box .icon-left {
+	height: auto;
+	left: 15px;
+	margin-right: 20px;
+	position: absolute;
+	text-align: center;
+	top: 5px;
+	transition: all 0.8s ease-in-out 0s;
+	width: 70px;
+	z-index: 1;
+}
+.icon-box .icon-left i {
+	color: #1d1d1d;
+	font-size: 50px;
+	text-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	transition: all 0.3s ease-in-out 0s;
+}
+.icon-box:hover .icon-left {
+	transform: rotate(360deg);
+}
+.services .icon-box .icon-content {
+	padding-left: 90px;
+}
+.services .icon-box .icon-content .title {
+	margin-bottom: 15px;
+}
+.services .icon-box .icon-content p {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+}
+/*
+================================================
+11. Testimonials Wrapper 
+================================================
+*/
+.testimonials-wrapper:before {
+	background: #000;
+	bottom: 0;
+	content: "";
+	left: 0;
+	opacity: 0.8;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+.testimonials-wrapper .section-number:before, .testimonials-wrapper .section-number:after {
+	background: #fff;
+}
+.testimonials-wrapper .section-number {
+	background: #fff;
+	border-color: #fff;
+}
+.testimonials-wrapper {
+	background: url(../image/counters-bg.jpg) no-repeat fixed left top;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	float: left;
+	z-index: 9;
+	padding: 116px 0 111px;
+}
+.testimonials-wrapper h2 {
+	color: #fff;
+}
+.testimonial::after {
+	bottom: 18px;
+	color: #ffffff;
+	content: "";
+	font-family: fontawesome;
+	font-size: 45px;
+	opacity: 0.2;
+	position: absolute;
+	right: 10px;
+}
+.testimonial {
+	border-radius: 15px;
+	overflow: visible;
+	position: relative;
+	padding: 30px 42px 30px 30px;
+	margin: 80px 0 0;
+	text-align: left;
+}
+.testimonial .author {
+	color: #ffffff;
+	margin: 0 0 5px;
+	text-transform: uppercase;
+}
+.testimonial .title {
+	color: #ffffff;
+	margin: 0 0 15px;
+	font-size: 12px;
+}
+.testimonial p {
+	color: #ffffff;
+	margin: 0;
+}
+.testimonial .content {
+	border: 5px solid #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	right: 40px;
+	top: -70px;
+}
+.testimonial .thumb img {
+	display: block;
+	transform-style: preserve-3d;
+	width: auto;
+	border-radius: 50%;
+}
+.testimonials-wrapper .owl-theme .owl-nav {
+	display: none;
+}
+.testimonials-wrapper .owl-theme .owl-dots .owl-dot span {
+	background: #8c8d8e;
+	opacity: 1;
+	margin: 0 3px;
+	width: 10px;
+	height: 10px;
+}
+.testimonials-wrapper .owl-dots {
+	padding: 30px 0 0;
+}
+/*
+================================================
+12. Portfolio
+================================================
+*/
+.portfolio {
+	clear: both;
+	float: left;
+	width: 100%;
+	padding: 116px 0 86px;
+}
+.work {
+	margin-bottom: 30px;
+}
+.work img {
+	width: 100%;
+}
+.work a {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+.work-inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: block;
+	padding: 20px;
+}
+.work-inner:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	z-index: 1;
+}
+.work:hover .work-inner:after {
+	opacity: 0.8;
+}
+.work-info {
+	text-align: center;
+	margin-top: 30%;
+	top: -15px;
+	position: relative;
+}
+.work-info i {
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.work-info i {
+	font-size: 14px;
+	top: 20px;
+	font-weight: 700;
+	-webkit-transition: all 0.6s;
+	transition: all 0.6s;
+	color: #333;
+	background: #fff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+.work:hover .work-info p, .work:hover .work-info h2, .work:hover .work-info i {
+	opacity: 1;
+	top: 0;
+}
+.portfolio-filter {
+	list-style: outside none none;
+	margin-bottom: 40px;
+	padding: 0;
+	text-align: center;
+}
+.portfolio-filter li {
+	display: inline-table;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 5px 15px;
+	margin: 0 2px;
+	cursor: pointer;
+	position: relative;
+	background: #f8f8f8;
+	transition: all 0.3s ease 0s;
+}
+.portfolio-filter li.active {
+	color: #fff;
+}
+.portfolio-filter li:after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 3px;
+	left: 0;
+	bottom: 0;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.portfolio-filter li.active:after {
+	width: 100%;
+}
+.work-popup {
+	max-width: 600px;
+	background: #fff;
+	position: relative!important;
+	margin: 30px auto;
+	left: 0!important;
+}
+.work-popup img {
+	width: 100%;
+	height: 100%;
+}
+.mfp-close-btn-in .mfp-close {
+	position: absolute;
+	background: #fff;
+	font-size: 40px;
+	width: 50px;
+	height: 50px;
+	opacity: 1;
+	box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+/*
+================================================
+13. Call to Action
+================================================
+*/
+.call-to-action {
+	padding: 50px 0;
+	width: 100%;
+	float: left;
+	background: #273238;
+}
+.call-to-action h3 {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 40px;
+	margin: 5px 0 0;
+	color: #eee;
+	position: relative;
+}
+.call-to-action .btn, .call-to-action .btn:hover, .call-to-action .btn:focus {
+	margin: 0;
+}
+/*
+================================================
+14. Our Team
+================================================
+*/
+.our-team {
+	padding: 116px 0 86px;
+}
+.our-team .single-team-item {
+	background: #f9f9f9;
+	padding: 20px;
+	text-align: center;
+	margin: 0 0 30px;
+}
+.our-team .single-team-item .team-image {
+	margin-bottom: 20px;
+}
+.our-team .single-team-item .team-image img {
+	border-radius: 50%;
+	display: inline-block;
+	width: 50%;
+	border: 1px solid #eee;
+}
+.our-team .single-team-item .team-content h3 {
+	font-size: 20px;
+	margin-bottom: 4px;
+}
+.our-team .single-team-item .team-content h3 a {
+	color: #222222;
+	transition: all 0.3s ease-in-out 0s;
+}
+.our-team .single-team-item .team-content .designation {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.our-team .single-team-item .team-content p {
+	color: #707070;
+	font-size: 14px;
+	line-height: 25px;
+	margin: 0 0 20px;
+}
+.our-team .single-team-item .team-content ul li a .fa-facebook {
+	background: #3b5998;
+}
+.our-team .single-team-item .team-content ul li a .fa-twitter {
+	background: #1da1f2;
+}
+.our-team .single-team-item .team-content ul li a .fa-linkedin {
+	background: #1981b4;
+}
+.our-team .single-team-item .team-content ul li a .fa-google-plus {
+	background: #dd4f43;
+}
+.our-team .single-team-item .team-content ul li {
+	display: inline-block;
+}
+.our-team .single-team-item .team-content ul li a i {
+	border-radius: 50%;
+	font-size: 14px;
+	height: 30px;
+	line-height: 32px;
+	text-align: center;
+	transition: all 0.3s ease-in-out 0s;
+	width: 30px;
+	color: #fff;
+}
+/*
+================================================
+15. Pricing Table
+================================================
+*/
+.pricing-table-wrapper {
+	background: #f7f7f7;
+	padding: 116px 0 111px;
+}
+.pricing-table-wrapper .pricing-table {
+	display: inline-block;
+	margin: 10px 0 0;
+	padding: 0;
+	width: 100%;
+}
+.pricing-table-wrapper .price-content-wrap {
+	background: #fff;
+	padding-bottom: 55px;
+	text-align: center;
+	box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.1);
+}
+.pricing-table-wrapper .plan-name {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 30px 0 20px;
+}
+.pricing-table-wrapper .price-title {
+	color: #222;
+	font-size: 24px;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.pricing-table-wrapper .plan-price {
+	border-radius: 50%;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: 130px;
+	margin: 0 auto;
+	place-content: center;
+	width: 130px;
+}
+.pricing-table-wrapper .plan-price > h4 {
+	font-size: 50px;
+	font-weight: 500;
+	letter-spacing: -2px;
+	margin-top: 22px;
+	color: #fff;
+}
+.pricing-table-wrapper .plan-price > h4 > span {
+	font-size: 20px;
+}
+.pricing-table-wrapper .duration {
+	display: block;
+	font-size: 16px;
+	margin-top: -2px;
+	text-align: center;
+}
+.pricing-table-wrapper .price-details {
+	font-size: 16px;
+	font-weight: 500;
+	list-style: none;
+	margin: 50px 0 0;
+}
+.pricing-table-wrapper .price-details li {
+	padding: 6px 0;
+}
+.pricing-table-wrapper .price-btn {
+	margin-top: 30px;
+}
+.price-btn {
+	background: #333;
+	color: #fff;
+}
+.pricing-table-wrapper .features-price-btn:hover {
+	background: #333;
+	color: #fff;
+}
+.pricing-table-wrapper .btn {
+	background: #eef1f2 none repeat scroll 0 0;
+	border-radius: 5px;
+	color: #474646;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 8px 35px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+	border: none;
+}
+/*
+================================================
+16. Contact Us
+================================================
+*/
+.google-map {
+	position: relative;
+	clear: both;
+	z-index: 9;
+	margin: 10px 0 0;
+}
+.google-map iframe {
+	width: 100%;
+	height: 330px;
+	border: solid 1px #ccc;
+}
+.form-control {
+	background: #fff;
+	border-color: #dddddd;
+	border-image: initial;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: none;
+	font-size: 14px;
+	height: 42px;
+	line-height: 24px;
+	padding: 6px 12px;
+	transition: all 0.3s ease 0s;
+}
+.contactus .form-group {
+	margin-bottom: 17px;
+}
+.contact-form .item {
+	color: #595959;
+	font-size: 16px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	padding-left: 30px;
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.contact-form .item .icons {
+	bottom: 0;
+	height: auto;
+	left: 0;
+	line-height: 20px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	vertical-align: middle;
+	width: auto;
+}
+.item .icons {
+	color: #27313d;
+	float: left;
+	font-size: 20px;
+	line-height: 40px;
+}
+.contact-info {
+	float: left;
+}
+.contact-info a {
+	color: #595959;
+	font-size: 16px;
+}
+.contactus .btn.btn-hero:hover, .contactus .btn.btn-hero:focus {
+	background: #282828;
+	color: #ffffff;
+}
+/*
+================================================
+17. Footer
+================================================
+*/
+footer {
+	padding: 15px 0;
+	width: 100%;
+	float: left;
+	background: #282828;
+}
+footer p {
+	color: #888888;
+	font-size: 13px;
+	margin: 0;
+	text-align: center;
+}
+/*
+================================================
+18. Media Quries 
+================================================
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+/*** header css ***/	
+header {
+	height: 500px;
+}
+.navbar-default .navbar-brand {
+	font-size: 24px;
+}
+.navigation {
+	padding: 0;
+}
+.navbar-collapse {
+	margin: 6px 0 0;
+}
+.navigation .navbar-collapse {
+	padding: 0;
+}
+.navbar-nav > li {
+	padding: 0 0 0 15px;
+}
+.navbar {
+	margin-top: 0px;
+}
+/*** banner css ***/
+.hero h1 {
+	font-size: 35px;
+}
+/*** pricing table css ***/	
+.pricing-table .space1 {
+	margin-top: 30px;
+}
+#scrool-top {
+	right: 15px;
+}
+}
+ @media (max-width: 767px) {
+/*** common css ***/
+section h2 {
+	font-size: 25px;
+}
+/*** header css ***/
+header {
+	height: 380px;
+}
+.logo-bar {
+	z-index: 9;
+	padding: 10px 0;
+}
+.navbar-toggle {
+	margin: 0 0 5px;
+}
+header .navbar-nav {
+	margin: 7.5px 0;
+}
+.navbar {
+	margin: 0;
+}
+.navbar-brand {
+	display: block;
+	padding: 0;
+	height: auto;
+}
+.hero h1 {
+	display: none;
+}
+.affix .navbar {
+	margin: 0px;
+}
+.affix + .banner-wrapper {
+	margin-top: 290px;
+}
+.navbar-nav > li {
+	padding: 0;
+}
+.navbar-nav > li > a {
+	padding-bottom: 10px;
+	display: inline-block;
+}
+.navbar-default .navbar-collapse {
+	float: none;
+	border: none;
+	box-shadow: none;
+}
+/*** banner css ***/
+.hero {
+	left: 50%;
+}
+/*** about us css ***/
+.about-box figure {
+	margin-bottom: 20px;
+}
+/*** counter css ***/
+.counter {
+	margin: 0 0 30px;
+}
+.counters {
+	padding-bottom: 30px;
+	margin: 0;
+}
+/*** testimonial css ***/
+.single-testimonial {
+	padding: 15px;
+}
+.single-testimonial .desg {
+	text-align: center;
+}
+/*** portfolio css ***/	
+.portfolio-filter li {
+	margin: 0 2px 10px;
+}
+/******* Call to action *******/
+.call-to-action {
+	text-align: center
+}
+.call-to-action h3 {
+	font-size: 20px;
+	margin: 0 0 20px;
+}
+.call-to-action .pull-right {
+	float: none !important;
+}
+/*** pricing table css ***/	
+.pricing-table-wrapper .space {
+	margin: 30px 0;
+}
+#scrool-top {
+	right: 15px;
+}
+}
