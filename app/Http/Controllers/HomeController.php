@@ -21,7 +21,7 @@ class HomeController extends Controller
         // $services = Service::all();
 
         // return view('home', compact('languages', 'products', 'services'));
-        return view('home');
+        return view('layouts.app');
     }
 
     /**
