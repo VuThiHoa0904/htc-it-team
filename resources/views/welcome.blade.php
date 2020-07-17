@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>IT CENTER</title>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -21,6 +21,7 @@
     <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/slick.css')}}" rel="stylesheet">
     <link href="{{asset('css/one.css')}}" id="style_theme" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
@@ -28,6 +29,8 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <script src="{{asset('js/html5shiv.min.js')}}"></script>
     <script src="{{asset('js/respond.min.js')}}"></script>
+{{--    slide customer--}}
+
 </head>
 
 <body id="home">
@@ -88,8 +91,8 @@
                 <div class="overlay"></div>
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#bs-carousel" data-slide-to="0" class=""></li>
-                    <li data-target="#bs-carousel" data-slide-to="1" class="active"></li>
+                    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#bs-carousel" data-slide-to="1" class=""></li>
                     <li data-target="#bs-carousel" data-slide-to="2" class=""></li>
                 </ol>
                 <!-- Wrapper for slides -->
@@ -97,24 +100,24 @@
                     <div class="item slides">
                         <div class="slide-1"></div>
                         <div class="hero">
-                            <h3 class="animated1">IT CENTER</h3>
-                            <h1 class="animated2">Báo cáo dữ liệu hàng tuần</h1>
-                            <button class="btn btn-hero btn-lg animated3">Liên Hệ</button>
+                            <h1 class="animated2">Thiết kế website</h1>
+                            <h3 class="animated1">Chuyên nghiệp - Chuẩn SEO google</h3>
+                            <button class="btn btn-hero btn-lg animated3">Xem chi tiết >></button>
                         </div>
                     </div>
                     <div class="item slides active">
                         <div class="slide-2"></div>
                         <div class="hero">
-                            <h3 class="animated1">IT CENTER</h3>
-                            <h1 class="animated2">Báo cáo dữ liệu hàng tuần</h1>
-                            <button class="btn btn-hero btn-lg animated3">Liên Hệ</button>
+                            <h1 class="animated2">Dịch vụ content <h3 class="animated1">"Giải pháp toàn diện cho website, fanpage" </h3></h1>
+{{--                            <h4 class="animated1">IT CENTER tự hào là sự lựa chọn hàng đầu. <br>Đem đến dịch vụ chất lượng, phù hợp với tài chính của khách hàng và luôn đồng hành trong quá trình phát triển của khách hàng</h4>--}}
+                            <button class="btn btn-hero btn-lg animated3">Xem thêm >></button>
                         </div>
                     </div>
                     <div class="item slides">
                         <div class="slide-3"></div>
                         <div class="hero">
-                            <h3 class="animated1">IT CENTER</h3>
-                            <h1 class="animated2">Báo cáo dữ liệu hàng tuần</h1>
+                            <h1 class="animated2">DIGITAL MARKETING</h1>
+                            <h3 class="animated1">IT CENTER sẽ giúp bạn gia tăng doanh số và phát triển thương hiệu vượt bậc</h3>
                             <button class="btn btn-hero btn-lg animated3">Liên Hệ</button>
                         </div>
                     </div>
@@ -150,6 +153,11 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 {{--    <script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>--}}
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+{{--        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>--}}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{asset('js/slick.js')}}" type="text/javascript" charset="utf-8"></script>
+
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/jquery.easing.min.js')}}"></script>
     <script src="{{asset('js/jquery.isotope.js')}}"></script>
@@ -170,6 +178,55 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-83282272-3');
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            if (typeof jQuery('.ult-carousel-12721472065e4375e12cebcd').slick == "function") {
+                $('.ult-carousel-12721472065e4375e12cebcd').slick({
+                    dots: false,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    speed: 500,
+                    infinite: true,
+                    arrows: true,
+                    nextArrow: false,
+                    prevArrow: false,
+                    slidesToScroll: 1,
+                    slidesToShow: 3,
+                    swipe: true,
+                    draggable: true,
+                    touchMove: true,
+                    pauseOnHover: true,
+                    responsive: [
+                        {
+                            breakpoint: 1025,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 769,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 481,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ],
+                    pauseOnDotsHover: true,
+                    customPaging: function (slider, i) {
+                        return '<i type="button" style= "" class="ultsl-record" data-role="none"></i>';
+                    },
+                });
+            }
+        });
     </script>
 </body>
 </html>

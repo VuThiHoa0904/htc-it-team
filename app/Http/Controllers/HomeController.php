@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-// use App\Language;
-// use App\Product;
-// use App\Service;
+ use App\Language;
+ use App\Customerfb;
+ use App\Service;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,12 +16,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $languages = Language::all();
+         $languages = Language::all();
         // $products = Product::all();
-        // $services = Service::all();
+         $services = Service::all();
+         $customers = Customerfb::all();
 
-        // return view('home', compact('languages', 'products', 'services'));
-        return view('layouts.app');
+         return view('layouts.app', compact('services','customers','languages'));
+//        return view('layouts.app');
     }
 
     /**

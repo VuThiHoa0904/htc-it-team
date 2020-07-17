@@ -7,20 +7,20 @@
 2. Common CSS
 3. Loader CSS
 4. Scrool top Arrow
-5. Logo Bar 
+5. Logo Bar
 6. Navigation
 7. Banner Wrapper
 8. About Us
 9. Counters
 10. Services
-11. Testimonials Wrapper 
+11. Testimonials Wrapper
 12. Portfolio
 13. Call to Action
 14. Our Team
 15. Pricing Table
 16. Contact Us
 17. Footer
-18. Media Quries 
+18. Media Quries
 
 /*
 ================================================
@@ -219,7 +219,7 @@ h2.section-heading {
 }
 /*
 ================================================
-5. Logo Bar 
+5. Logo Bar
 ================================================
 */
 .logo-bar {
@@ -349,6 +349,13 @@ h2.section-heading {
 }
 .hero h3 {
 	font-size: 30px;
+	font-weight: 300;
+	padding: 0;
+	margin: 0 0 8px;
+}
+.hero h4 {
+    color: #fff;
+	font-size: 20px;
 	font-weight: 300;
 	padding: 0;
 	margin: 0 0 8px;
@@ -595,7 +602,7 @@ h2.section-heading {
 }
 /*
 ================================================
-11. Testimonials Wrapper 
+11. Testimonials Wrapper
 ================================================
 */
 .testimonials-wrapper:before {
@@ -670,7 +677,7 @@ h2.section-heading {
 .testimonial .thumb img {
 	display: block;
 	transform-style: preserve-3d;
-	width: auto;
+	width: 100px;
 	border-radius: 50%;
 }
 .testimonials-wrapper .owl-theme .owl-nav {
@@ -921,18 +928,44 @@ h2.section-heading {
 	width: 100%;
 }
 .pricing-table-wrapper .price-content-wrap {
-	background: #fff;
+	background: #daeaff;
+	/*background: #ffe7f5;*/
 	padding-bottom: 55px;
 	text-align: center;
-	box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.25);
 }
-.pricing-table-wrapper .plan-name {
-	display: inline-block;
+.pricing-table-wrapper .price-content-wrap2 {
+	/*background: #daeaff;*/
+	background: #ffe7f5;
+	padding-bottom: 55px;
+	text-align: center;
+	/*box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.25);
+}
+.pricing-table-wrapper .plan-name1 {
+	/*display: inline-block;*/
 	margin-bottom: 10px;
 	padding: 30px 0 20px;
+    background-image: -webkit-linear-gradient(108deg, #2f80ed 0%, #56ccf2 100%);
+    /*background-image: -webkit-linear-gradient(108deg, #6e48aa 0%, #c05bd2 100%);*/
+}
+.pricing-table-wrapper .plan-name2 {
+	/*display: inline-block;*/
+	margin-bottom: 10px;
+	padding: 30px 0 20px;
+    /*background-image: -webkit-linear-gradient(108deg, #2f80ed 0%, #56ccf2 100%);*/
+    background-image: -webkit-linear-gradient(108deg, #6e48aa 0%, #c05bd2 100%);
+}
+.pricing-table-wrapper .plan-name3 {
+	/*display: inline-block;*/
+	margin-bottom: 10px;
+	padding: 30px 0 20px;
+    /*background-image: -webkit-linear-gradient(108deg, #2f80ed 0%, #56ccf2 100%);*/
+    background-image: -webkit-linear-gradient(108deg, #ec008c 0%, #ff6767 100%);
 }
 .pricing-table-wrapper .price-title {
-	color: #222;
+	color: #fbfbfb;
 	font-size: 24px;
 	font-weight: 500;
 	text-transform: capitalize;
@@ -948,16 +981,18 @@ h2.section-heading {
 	width: 130px;
 }
 .pricing-table-wrapper .plan-price > h4 {
+    color: #26c6da;
 	font-size: 50px;
 	font-weight: 500;
 	letter-spacing: -2px;
 	margin-top: 22px;
-	color: #fff;
+	/*color: #fff;*/
 }
 .pricing-table-wrapper .plan-price > h4 > span {
 	font-size: 20px;
 }
 .pricing-table-wrapper .duration {
+    color: #26c6da;
 	display: block;
 	font-size: 16px;
 	margin-top: -2px;
@@ -967,7 +1002,7 @@ h2.section-heading {
 	font-size: 16px;
 	font-weight: 500;
 	list-style: none;
-	margin: 50px 0 0;
+	margin: 27px 0 0;
 }
 .pricing-table-wrapper .price-details li {
 	padding: 6px 0;
@@ -984,15 +1019,30 @@ h2.section-heading {
 	color: #fff;
 }
 .pricing-table-wrapper .btn {
-	background: #eef1f2 none repeat scroll 0 0;
+	/*background: #eef1f2 none repeat scroll 0 0;*/
+    /*background-image: -webkit-linear-gradient(108deg, #2f80ed 0%, #56ccf2 100%);*/
 	border-radius: 5px;
-	color: #474646;
+	/*color: #474646;*/
+	color: #fff;
 	font-size: 14px;
 	font-weight: 700;
 	padding: 8px 35px;
 	text-transform: uppercase;
 	transition: all 0.3s ease 0s;
 	border: none;
+}
+.pricing-table-wrapper .btn1 {
+	/*background: #eef1f2 none repeat scroll 0 0;*/
+    background-image: -webkit-linear-gradient(108deg, #2f80ed 0%, #56ccf2 100%);
+}
+.pricing-table-wrapper .btn2 {
+	/*background: #eef1f2 none repeat scroll 0 0;*/
+    background-image: -webkit-linear-gradient(108deg, #6e48aa 0%, #c05bd2 100%);
+
+}
+.pricing-table-wrapper .btn3 {
+	/*background: #eef1f2 none repeat scroll 0 0;*/
+   background-image: -webkit-linear-gradient(108deg, #ec008c 0%, #ff6767 100%);
 }
 /*
 ================================================
@@ -1084,11 +1134,11 @@ footer p {
 }
 /*
 ================================================
-18. Media Quries 
+18. Media Quries
 ================================================
 */
 @media (min-width: 768px) and (max-width: 991px) {
-/*** header css ***/	
+/*** header css ***/
 header {
 	height: 500px;
 }
@@ -1114,7 +1164,7 @@ header {
 .hero h1 {
 	font-size: 35px;
 }
-/*** pricing table css ***/	
+/*** pricing table css ***/
 .pricing-table .space1 {
 	margin-top: 30px;
 }
@@ -1193,7 +1243,7 @@ header .navbar-nav {
 .single-testimonial .desg {
 	text-align: center;
 }
-/*** portfolio css ***/	
+/*** portfolio css ***/
 .portfolio-filter li {
 	margin: 0 2px 10px;
 }
@@ -1208,7 +1258,7 @@ header .navbar-nav {
 .call-to-action .pull-right {
 	float: none !important;
 }
-/*** pricing table css ***/	
+/*** pricing table css ***/
 .pricing-table-wrapper .space {
 	margin: 30px 0;
 }

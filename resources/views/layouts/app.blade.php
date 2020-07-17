@@ -16,7 +16,7 @@
                         {!! setting('site.about') !!}
                         <a href="#services" class="btn btn-hero smooth-scrool">Dịch vụ của chúng tôi</a></div>
                     <div class="col-sm-5">
-                        <div class="about-image"><img src="{{asset('image/about-us.png')}}" alt="">
+                        <div class="about-image"><img src="{{asset('image/people.png')}}" alt="" width="350px" height="300px">
                         </div>
                     </div>
                 </div>
@@ -29,25 +29,25 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="counter"><i class="fa fa-clock-o"></i>
-                        <div class="number animateNumber"><span>{{setting('home.hours')}}</span></div>
+                        <div class="number animateNumber"><span>{{setting('site.hours')}}</span></div>
                         <p>Số giờ làm việc</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="counter"><i class="fa fa-user-circle-o"></i>
-                        <div class="number animateNumber"><span>{{setting('home.customers')}}</span></div>
+                        <div class="number animateNumber"><span>{{setting('site.customers')}}</span></div>
                         <p>Khách hàng</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="counter"><i class="fa fa-check-circle-o"></i>
-                        <div class="number animateNumber"><span>{{setting('home.done_projects')}}</span></div>
+                        <div class="number animateNumber"><span>{{setting('site.done_projects')}}</span></div>
                         <p>Dự án đã hoàn thành</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="counter"><i class="fa fa-thumbs-o-up"></i>
-                        <div class="number animateNumber"><span>{{setting('home.Percent_ratio_customers')}}</span></div>
+                        <div class="number animateNumber"><span>{{setting('site.percent_ratio_customers')}}</span></div>
                         <p>Tỉ lệ Khách hàng hài lòng</p>
                     </div>
                 </div>
@@ -60,27 +60,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"><span class="section-number">3</span>
-                    <h2 class="section-heading">Dịch Vụ Của Chúng Tôi...</h2>
+                    <h2 class="section-heading">Dịch vụ của chúng tôi...</h2>
                 </div>
             </div>
         </div>
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                @foreach($services as $item)--}}
-{{--                <div class="col-md-4 col-sm-6">--}}
-{{--                    <div class="icon-box">--}}
-{{--                        <div class="icon-left">--}}
+        <div class="container">
+            <div class="row">
+                @foreach($services as $item)
+                <div class="col-md-4 col-sm-6">
+                    <div class="icon-box">
+                        <div class="icon-left">
 {{--                            <i class="{{$item->icon}}"></i>--}}
-{{--                        </div>--}}
-{{--                        <div class="icon-content">--}}
-{{--                            <h4 class="title">{{$item->title}}</h4>--}}
-{{--                            <p>{{$item->description}}</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
-{{--        </div>--}}
+                            <img src="{{asset($item->icon)}}" width="74px" height="74px"/>
+                        </div>
+                        <div class="icon-content">
+                            <h4 class="title">{{$item->title}}</h4>
+                            <p>{{$item->description}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </section>
     <!-- Services End -->
     <!-- Testimonials Wrapper Start -->
@@ -95,105 +96,17 @@
         <div class="container">
             <div class="row">
                 <div id="testimonials" class="owl-carousel owl-theme">
+                    @foreach($customers as $item)
                     <div class="item">
                         <div class="testimonial">
-                            <h4 class="author">PHÍ VINH CÔNG</h4>
-                            <h6 class="title">Nhà triết học</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials1.png">
+                            <h4 class="author">{{$item->name}}</h4>
+                            <h6 class="title">{{$item->job}}</h6>
+                            <div class="content thumb"><img class="img-circle" alt="" src="{{asset($item->image)}}" width="100px" height="100px">
                             </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
+                            <p><em>{{$item->content}}</em></p>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">NÔNG VĂN KHÁNH</h4>
-                            <h6 class="title">Giáo sư</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials2.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">DƯƠNG QUANG ĐỊNH</h4>
-                            <h6 class="title">Nhà sử học</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials3.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">Person Name</h4>
-                            <h6 class="title">Designation</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials2.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">Person Name</h4>
-                            <h6 class="title">Designation</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials1.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">Person Name</h4>
-                            <h6 class="title">Designation</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials3.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">Person Name</h4>
-                            <h6 class="title">Designation</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials1.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">Person Name</h4>
-                            <h6 class="title">Designation</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials2.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <h4 class="author">Person Name</h4>
-                            <h6 class="title">Designation</h6>
-                            <div class="content thumb"><img class="img-circle" alt=""
-                                                            src="http://sbtechnosoft.com/digitalseo/images/testimonials3.png">
-                            </div>
-                            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                    expedita placeat facilis odio illo ex accusantium eaque.</em></p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -204,120 +117,44 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"><span class="section-number">5</span>
-                    <h2 class="section-heading">Lĩnh vực phát triển...</h2>
+                    <h2 class="section-heading">Công nghệ phát triển...</h2>
                 </div>
             </div>
         </div>
         <!-- Portfolio Filters -->
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-sm-12">--}}
-{{--                    @foreach($products as $item)--}}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+{{--                    @foreach($languages as $item)--}}
 {{--                        {!! $item->description !!}--}}
 {{--                    @endforeach--}}
-{{--                    <ul class="portfolio-filter">--}}
-{{--                        <li class="filter active" data-filter="*">All</li>--}}
-{{--                        @foreach($languages as $item)--}}
-{{--                            <li class="filter" data-filter=".{{$item->data_filter}}">{{$item->name}}</li>--}}
-{{--                        @endforeach--}}
-{{--                    </ul>--}}
-{{--                    <!-- /Portfolio Filters -->--}}
-{{--                    <!-- Portfolio Wrap -->--}}
-{{--                    <div class="row portfolio-container">--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work laravel"><a href="#work_id-1"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img1.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-1" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img1.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work laravel"><a href="#work_id-2"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img2.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-2" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img2.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work jquery"><a href="#work_id-3"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img3.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-3" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img3.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work html"><a href="#work_id-4"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img4.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-4" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img4.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work html"><a href="#work_id-5"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img5.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-5" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img5.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work py"><a href="#work_id-6"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img6.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-6" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img6.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work bootstrap"><a href="#work_id-7"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img3.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-7" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img3.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work py"><a href="#work_id-8"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img1.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-8" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img1.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                        <!-- single portfolio -->--}}
-{{--                        <div class="col-md-4 col-sm-6 col-xs-12 work html"><a href="#work_id-9"> <img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img2.jpg" alt="">--}}
-{{--                                <div class="work-inner">--}}
-{{--                                    <div class="work-info"><i class="fa fa-search"></i></div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div id="work_id-9" class="mfp-hide work-popup"><img--}}
-{{--                                        src="http://sbtechnosoft.com/digitalseo/images/gallery-img2.jpg" alt=""></div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+                    <ul class="portfolio-filter">
+                        <li class="filter active" data-filter="*">All</li>
+                        @foreach($languages as $item)
+                            <li class="filter" data-filter=".{{$item->data_filter}}">{{$item->name}}</li>
+                        @endforeach
+                    </ul>
+                    <!-- /Portfolio Filters -->
+                    <!-- Portfolio Wrap -->
+                    <div class="row portfolio-container">
+                        <!-- single portfolio -->
+                        @foreach($languages as $item)
+                        <div class="col-md-4 col-sm-6 col-xs-12 work laravel">
+                            <a href="#work_id-1">
+                                <img src="{{asset($item->image)}}" alt="" width="400px" height="300px">
+                                <div class="work-inner">
+                                    <div class="work-info"><i class="fa fa-search"></i></div>
+                                </div>
+                            </a>
+                            <div id="work_id-1" class="mfp-hide work-popup">
+                                <img src="http://sbtechnosoft.com/digitalseo/images/gallery-img1.jpg" alt="">
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- /Portfolio Wrap -->
     </section>
     <!-- Portfolio End -->
@@ -362,54 +199,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-team-item">
-                        <div class="team-image"><a href="#"><img
-                                        src="http://sbtechnosoft.com/digitalseo/images/out-team2.jpg" alt=""></a></div>
-                        <div class="team-content">
-                            <h3><a href="#">Dave Young</a></h3>
-                            <span class="designation">SEO Analyst</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                expedita placeat facilis odio illo eaque.</p>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-team-item">
-                        <div class="team-image"><a href="#"><img
-                                        src="http://sbtechnosoft.com/digitalseo/images/out-team3.jpg" alt=""></a></div>
-                        <div class="team-content">
-                            <h3><a href="#">Mary Williams</a></h3>
-                            <span class="designation">SEO Analyst</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                expedita placeat facilis odio illo eaque.</p>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-team-item">
-                        <div class="team-image"><a href="#"><img
-                                        src="http://sbtechnosoft.com/digitalseo/images/out-team4.jpg" alt=""></a></div>
-                        <div class="team-content">
-                            <h3><a href="#">Robin Williams</a></h3>
-                            <span class="designation">Ruby Williams</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsam,
-                                expedita placeat facilis odio illo eaque.</p>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -419,7 +208,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"><span class="section-number">7</span>
-                    <h2 class="section-heading">Giá thành...</h2>
+                    <h2 class="section-heading">Giá thành website...</h2>
                 </div>
             </div>
         </div>
@@ -428,68 +217,96 @@
                 <div class="pricing-table">
                     <div class="col-md-4 col-sm-6">
                         <div class="price-content-wrap">
-                            <div class="plan-name">
-                                <p class="price-title mr-btm-48">Website Giới Thiệu Doanh Nghiệp</p>
+                            <div class="plan-name1">
+                                <p class="price-title mr-btm-48">Giới Thiệu Doanh Nghiệp</p>
                             </div>
                             <div class="plan-price">
                                 <h4><span>$</span> 99</h4>
-                                <span class="duration">All Taxes</span></div>
+                                <span class="duration">Only</span></div>
                             <ul class="price-details">
-                                <li><strong>Full</strong> Access</li>
-                                <li>Source Files</li>
-                                <li><strong>Unlimited</strong> Users</li>
-                                <li><strong>150</strong> Domains</li>
-                                <li><strong>430 Email</strong> Accounts</li>
-                                <li>Automatic Cloud Backups</li>
+                                <li>Bảo mật SSL</li>
+                                <li>Hộ trợ bài viết</li>
+                                <li>Hỗ trợ tùy chỉnh</li>
+                                <li>Dịch vụ quảng cáo</li>
+                                <li>Email doanh nghiệp</li>
+                                <li>Bộ nhận diện thương hiệu</li>
                             </ul>
-                            <a href="#" class="btn mian-btn price-btn">Liên Hệ</a></div>
+                            <a href="#" class="btn btn1 mian-btn price-btn">Liên Hệ</a></div>
                     </div>
                     <div class="col-md-4 col-sm-6 space">
                         <div class="price-content-wrap features-price">
-                            <div class="plan-name">
-                                <p class="price-title mr-btm-48">Website Thương Mại Điện Tử</p>
+                            <div class="plan-name2">
+                                <p class="price-title mr-btm-48">Thương Mại Điện Tử</p>
                             </div>
                             <div class="plan-price">
                                 <h4><span>$</span> 299</h4>
-                                <span class="duration">All Taxes</span></div>
+                                <span class="duration">Only</span></div>
                             <ul class="price-details">
-                                <li><strong>Full</strong> Access</li>
-                                <li>Source Files</li>
-                                <li><strong>Unlimited</strong> Users</li>
-                                <li><strong>150</strong> Domains</li>
-                                <li><strong>430 Email</strong> Accounts</li>
-                                <li>Automatic Cloud Backups</li>
+                                <li>Hỗ trợ tối ưu SEO</li>
+                                <li>Chức năng Responsive</li>
+                                <li>Tích hợp các mạng xã hội</li>
+                                <li>Giao diện phù hợp với sản phẩm</li>
+                                <li>Tích hợp phương thức giao hàng</li>
+                                <li>Cung cấp các phương thức thanh toán đa dạng</li>
                             </ul>
-                            <a href="#" class="btn mian-btn price-btn features-price-btn">Liên Hệ</a></div>
+                            <a href="#" class="btn btn2 mian-btn price-btn features-price-btn">Liên Hệ</a></div>
                     </div>
                     <div class="col-md-4 col-sm-6 space1">
-                        <div class="price-content-wrap">
-                            <div class="plan-name">
-                                <p class="price-title mr-btm-48">Website Quản Trị Doanh Nghiệp</p>
+                        <div class="price-content-wrap2">
+                            <div class="plan-name3">
+                                <p class="price-title mr-btm-48">Quản Trị Doanh Nghiệp</p>
                             </div>
                             <div class="plan-price">
                                 <h4><span>$</span> 399</h4>
-                                <span class="duration">All Taxes</span></div>
+                                <span class="duration">Only</span></div>
                             <ul class="price-details">
-                                <li><strong>Full</strong> Access</li>
-                                <li>Source Files</li>
-                                <li><strong>Unlimited</strong> Users</li>
-                                <li><strong>150</strong> Domains</li>
-                                <li><strong>430 Email</strong> Accounts</li>
-                                <li>Automatic Cloud Backups</li>
+                                <li>Quản lý công việc</li>
+                                <li>Quản lý sản xuất</li>
+                                <li>Quản lý kho hàng</li>
+                                <li>Quản lý nhân sự và tính lương</li>
+                                <li>Hệ thống báo cáo tổng thể doanh nghiệp</li>
+                                <li>Quản lý quan hệ khách hàng và nhà cung cấp</li>
                             </ul>
-                            <a href="#" class="btn mian-btn price-btn">Liên Hệ</a></div>
+                            <a href="#" class="btn btn3 mian-btn price-btn">Liên Hệ</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+     <section id="services" class="services" style="height: 500px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12"><span class="section-number">8</span>
+                        <h2 class="section-heading">Khách hàng của chúng tôi</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ult-carousel-wrapper  vc_custom_1466721383271  ult_horizontal" id="ult-carousel-19223484825e4375e12cf3b" data-gutter="15" data-rtl="false">
+                    <!-- Portfolio Wrap -->
+                    <div class="row portfolio-container ult-carousel-12721472065e4375e12cebcd" >
+                        <!-- single portfolio -->
+                            <a href="https://www.irisschool.edu.vn" target="_blank" title="Iris School"><img src="https://htcenter.edu.vn/storage/partners/April2020/Zm13hogivPJvo6U8rpLq.jpg" alt="Iris School" style="width: 80%;"></a>
+
+                            <a href="http://www.thaihung.com.vn/" target="_blank" title="CÔNG TY CỔ PHẦN THƯƠNG MẠI THÁI HƯNG"><img src="https://htcenter.edu.vn/storage/partners/April2020/1kCcyWAIx2ptDp71OxHi.jpg" alt="CÔNG TY CỔ PHẦN THƯƠNG MẠI THÁI HƯNG" style="width: 80%;"></a>
+
+                            <a href="https://www.vietnam.com/" target="_blank" title="Vietnam.com"><img src="https://htcenter.edu.vn/storage/partners/May2020/SC7GJkI5ZZ40te95UwkQ.png" alt="Vietnam.com" style="width: 80%;"></a>
+
+                            <a href="https://smarthomethainguyen.com" target="_blank" title="Công ty TNHH Smarthome Thái Nguyên"><img src="https://htcenter.edu.vn/storage/partners/April2020/DYD8Gt5aCwi4yFu0JiK6.jpg" alt="Công ty TNHH Smarthome Thái Nguyên" style="width: 80%;"></a>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
     <!-- Pricing Table end -->
     <!-- Contact Us Start -->
     <section id="contactus" class="contactus">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12"><span class="section-number">8</span>
+                <div class="col-sm-12"><span class="section-number">9</span>
                     <h2 class="section-heading">Liên hệ với chúng tôi...</h2>
                 </div>
             </div>

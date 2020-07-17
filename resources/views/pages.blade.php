@@ -8,9 +8,3 @@
 @else
      you can't have permission
 @endcan
-{{--<?php $browsePages = Voyager::can('browse_pages'); ?>--}}
-{{--@if($browsePages)--}}
-{{--    You can browse pages--}}
-{{--@else--}}
-{{--    You can not browse pages--}}
-{{--@endif--}}

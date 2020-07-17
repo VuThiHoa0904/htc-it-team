@@ -17,7 +17,7 @@ Common CSS
 }
 #switcher .theme-click {
     background-color: #26c6da;
-}	
+}
 /*
 ================================================
 Scroll top Arrow
@@ -58,14 +58,14 @@ Banner Content
 	}
 .hero h1 {
 	color:#fff;
-	}	
+	}
 .hero h3 {
-	color:#fff;	
-	}	
+	color:#fff;
+	}
 .btn.btn-hero {
 	background-color: #26c6da;
 	border-color: #26c6da;
-}	
+}
 .btn.btn-hero:hover, .btn.btn-hero:focus {
 	color: #26c6da;
 	}
@@ -73,10 +73,10 @@ Banner Content
 ================================================
 Counters
 ================================================
-*/	
+*/
 .counters .counter i {
 	color: #26c6da;
-}	
+}
 /*
 ================================================
 Services
@@ -88,9 +88,9 @@ Services
 }
 /*
 ================================================
-Testimonials Wrapper 
+Testimonials Wrapper
 ================================================
-*/	
+*/
 .testimonial {
   background:#26c6da;
 }
@@ -110,35 +110,38 @@ Portfolio
 ================================================
 Our Team
 ================================================
-*/	
+*/
 .our-team .single-team-item .team-content .designation {
   color: #26c6da;
-}	
+}
 /*
 ================================================
 Pricing Table
 ================================================
 */
 .pricing-table-wrapper .features-price {
-	background:#26c6da;
-	color:#fff;
+	background:#e9dbff;
+	/*color:#fff;*/
+	color:#444;
 }
 .pricing-table-wrapper .plan-price {
-  background: #26c6da;
+  /*background: #26c6da;*/
+  background: #fff;
 }
 .pricing-table-wrapper .features-price .plan-price {
 	background:#fff;
-	} 
+	}
 .pricing-table-wrapper .features-price .plan-price > h4, .pricing-table-wrapper .features-price .plan-price > h4 > span, .pricing-table-wrapper .features-price .duration {
 	color:#26c6da;
 	}
 .pricing-table-wrapper .features-price .btn {
-	background:#fff;
-	}	
+	/*background:#fff;*/
+    background-image: -webkit-linear-gradient(108deg, #6e48aa 0%, #c05bd2 100%);
+	}
 .pricing-table-wrapper .features-price .btn:hover {
 	background:#eef1f2;
 	color:#333;
-	}	
+	}
 .pricing-table-wrapper .features-price .price-title {
 	color:#fff;
 }
