@@ -192,7 +192,7 @@
                     nextArrow: false,
                     prevArrow: false,
                     slidesToScroll: 1,
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     swipe: true,
                     draggable: true,
                     touchMove: true,

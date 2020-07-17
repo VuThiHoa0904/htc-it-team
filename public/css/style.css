@@ -858,6 +858,7 @@ h2.section-heading {
 	padding: 20px;
 	text-align: center;
 	margin: 0 0 30px;
+    box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.25);
 }
 .our-team .single-team-item .team-image {
 	margin-bottom: 20px;
