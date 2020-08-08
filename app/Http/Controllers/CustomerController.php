@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
- use App\Service;
- use App\Team;
- use App\Product;
- use App\Banner;
- use TCG\Voyager\Models\Post;
- use App\Commitment;
 use Illuminate\Http\Request;
+use App\Customer;
 
-class HomeController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-         $teams = Team::all();
-         $services = Service::all();
-         $product = Product::orderBy('created_at', 'DESC')->first();
-         $banners = Banner::all();
-         $commitments = Commitment::all();
-         $post = Post::orderBy('created_at', 'DESC')->first();
-         $posts = Post::orderBy('created_at', 'DESC')->limit(3)->get();
-
-         return view('layouts.app', compact('services','teams','product','banners','commitments','posts','post'));
-//        return view('layouts.app');
+        //
     }
 
     /**
@@ -38,7 +24,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.app');
     }
 
     /**
@@ -49,7 +35,16 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        dd($request);
+//        $data = $request->validate([ 'name' => 'required','phone' => 'required', 'email' => 'required|email','title' => 'required', 'content' => 'required' ]);
+        $data = new Customer();
+        $data->name = $request->name ??  '';
+        $data->phone = $request->phone ??  '';
+        $data->email = $request->email ??  '';
+        $data->title = $request->subject ??  '';
+        $data->content = $request->message ??  '';
+        $data->save();
+        return back();
     }
 
     /**

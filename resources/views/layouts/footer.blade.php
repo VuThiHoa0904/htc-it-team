@@ -1,17 +1,18 @@
 @extends('welcome')
 @section('footer')
  <!-- Copy Rights Start -->
-    <footer>
-        <div class="container">
-            <p>&copy; Copyright
-                <script type="text/javascript">
-                    var d = new Date();
-                    document.write(d.getFullYear());
-                </script>
-                Digital Seo | All Rights Reserved.
-            </p>
-        </div>
-    </footer>
+ <footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter"><div class="wrap"><p>Copyright ©&nbsp;2020 · <a href="http://my.studiopress.com/themes/digital/">Digital Pro</a> on <a href="https://www.studiopress.com/">Genesis Framework</a> · <a href="https://wordpress.org/">WordPress</a> · <a href="https://demo.studiopress.com/digital/wp-login.php">Log in</a></p></div></footer>
+{{--    <footer>--}}
+{{--        <div class="container">--}}
+{{--            <p>&copy; Copyright--}}
+{{--                <script type="text/javascript">--}}
+{{--                    var d = new Date();--}}
+{{--                    document.write(d.getFullYear());--}}
+{{--                </script>--}}
+{{--                Digital Seo | All Rights Reserved.--}}
+{{--            </p>--}}
+{{--        </div>--}}
+{{--    </footer>--}}
     <!-- Copy Rights End -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 {{--    <script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>--}}

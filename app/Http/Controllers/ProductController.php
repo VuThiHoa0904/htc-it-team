@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
- use App\Service;
- use App\Team;
- use App\Product;
- use App\Banner;
- use TCG\Voyager\Models\Post;
- use App\Commitment;
+use App\Banner;
+use App\Product;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +15,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-         $teams = Team::all();
-         $services = Service::all();
-         $product = Product::orderBy('created_at', 'DESC')->first();
-         $banners = Banner::all();
-         $commitments = Commitment::all();
-         $post = Post::orderBy('created_at', 'DESC')->first();
-         $posts = Post::orderBy('created_at', 'DESC')->limit(3)->get();
-
-         return view('layouts.app', compact('services','teams','product','banners','commitments','posts','post'));
-//        return view('layouts.app');
+//        $product = Product::orderBy('created_at', 'DESC')->first();
+        $products = Product::paginate(6);
+//        dd($products);
+        $banners = Banner::all();
+        return view('pages.products', compact('product','products','banners'));
     }
 
     /**

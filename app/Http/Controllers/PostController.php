@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
- use App\Service;
- use App\Team;
- use App\Product;
- use App\Banner;
- use TCG\Voyager\Models\Post;
- use App\Commitment;
+use App\Banner;
+use DB;
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Post;
 
-class HomeController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +16,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-         $teams = Team::all();
-         $services = Service::all();
-         $product = Product::orderBy('created_at', 'DESC')->first();
-         $banners = Banner::all();
-         $commitments = Commitment::all();
-         $post = Post::orderBy('created_at', 'DESC')->first();
-         $posts = Post::orderBy('created_at', 'DESC')->limit(3)->get();
-
-         return view('layouts.app', compact('services','teams','product','banners','commitments','posts','post'));
-//        return view('layouts.app');
+        $banners = Banner::all();
+        $post = Post::orderBy('created_at', 'DESC')->first();
+        $posts = Post::paginate(4);
+        return view('pages.news', compact('banners','post','posts'));
     }
 
     /**
@@ -55,12 +46,14 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  String  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $posts = Post::orderBy('created_at', 'DESC')->limit(4)->get();
+        $post = DB::table('posts')->where('slug','=',$slug)->first();;
+        return view('pages.detail_new', compact('post','posts'));
     }
 
     /**

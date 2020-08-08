@@ -51,7 +51,7 @@
     <!-- Header -->
     <header>
         <div class="logo-bar fadeInDown" data-spy="affix" data-offset-top="197">
-            <div class="container">
+            <div class="container-header">
                 <div class="row">
                     <!-- Navigation -->
                     <div class="col-sm-12 col-xs-12 navigation">
